@@ -14,7 +14,7 @@ export default function Home() {
           {' '}a software engineer and An Ethical Penetester</p>
         <p>
           You can contact me on {' '}
-          <a href="https://t.me/shungumutitima">Telegram</a> | {' '}
+          <a href="https://t.me/m4g3n74">Telegram</a> | {' '}
           <a href="https://twitter.com/m4g3n74">Twitter</a>
         </p>
       </section>
