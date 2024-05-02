@@ -5,16 +5,16 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Given Malambo';
-export const siteTitle = 'Given Malambo';
+export const siteTitle = 'Malambo\'s Blog';
 
 export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/kali-linux.svg" />
                 <meta
                     name="description"
-                    content="personal website using Next.js"
+                    content="py blog written using Next.js"
                 />
                 <meta
                     property="og:image"
@@ -40,7 +40,7 @@ export default function Layout({ children, home }) {
                     </>
                 ) : (
                     <>
-                        <Link href="/">
+                        <Link href="/" legacyBehavior>
                             <Image
                                 priority
                                 src="/images/profile0.jpg"
@@ -51,7 +51,7 @@ export default function Layout({ children, home }) {
                             />
                         </Link>
                         <h2 className={utilStyles.headingLg}>
-                            <Link href="/" className={utilStyles.colorInherit}>
+                            <Link href="/" className={utilStyles.colorInherit} legacyBehavior>
                                 {name}
                             </Link>
                         </h2>

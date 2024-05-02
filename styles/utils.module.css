@@ -4,7 +4,7 @@
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
-    color: #4d017c;
+    color: #092e20;
 }
 
 .headingXl {
@@ -29,7 +29,7 @@
 
 .borderCircle  {
     border-radius: 9999px;
-    border-color: #5200bd;
+    border-color: #092e20;
 
 }
 
@@ -70,8 +70,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-    color: #000000;
-    border-color: #5200bd;
+    color: #11ff00;
+    border-color: #000000;
 }
 
 .card h3 {
