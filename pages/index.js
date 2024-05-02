@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       <section className={''}>
         <p>Hello Traveler, I'm{' '}
           <strong>Given</strong>
-          {' '}A Jr Backend Software engineer & Some Red Teaming 😉</p>
+          {' '}A <strong>Jr Backend</strong> Software engineer & Some <strong>Red Teaming</strong> 😉</p>
           <p>This place is where i dump my research and some useful writings </p>
         <p>
           You can contact me on {' '}
