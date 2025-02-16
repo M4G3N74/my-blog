@@ -14,7 +14,7 @@ After 4days of continues learning, watching and reading. time to practice what w
 
 
 
-![Day 4](./img/day04.png)
+
 
 
 # [Bootstrap Docs here](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
