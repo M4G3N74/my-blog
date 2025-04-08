@@ -21,9 +21,9 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={''}>
-        <p>Hello Traveler, I'm{' '}
-          <strong>Given</strong>
-          {' '}A <strong>Jr Backend</strong> Software engineer & Some <strong>Red Teaming</strong> 😉</p>
+        <p>Hi Mate,{' '}
+          <strong>Given </strong>here
+          {' '}a <strong>junior Software engineer </strong> at <a href="https://probasegroup.com/">Probase Group</a></p>
           <p>This place is where i dump my research and some useful writings </p>
         <p>
           You can contact me on {' '}
