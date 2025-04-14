@@ -1,0 +1,88 @@
+.tocContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.dark .tocContainer {
+  background-color: #252525;
+  border-color: #333;
+}
+
+.tocTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #431c81;
+}
+
+.dark .tocTitle {
+  color: #9f87ff;
+}
+
+.toc {
+  position: relative;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tocItem {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.tocLevel2 {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tocLevel2::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #5146e0;
+}
+
+.dark .tocLevel2::before {
+  background-color: #8f85ff;
+}
+
+.tocLink {
+  color: #5146e0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.tocLink:hover {
+  color: #431c81;
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+.dark .tocLink {
+  color: #8f85ff;
+}
+
+.dark .tocLink:hover {
+  color: #a599ff;
+}
+
+@media (min-width: 768px) {
+  .tocContainer {
+    position: sticky;
+    top: 2rem;
+  }
+}

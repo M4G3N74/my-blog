@@ -24,7 +24,7 @@ export default function Blog({ allPostsData }) {
       <section>
         <h1 className={utilStyles.headingXl}>All Blog Posts</h1>
         <div className={utilStyles.cardGrid}>
-          {allPostsData.map(({ id, date, title, excerpt }) => (
+          {allPostsData.map(({ id, date, title, excerpt, readingTime }) => (
             <div className={utilStyles.card} key={id}>
               <div className={utilStyles.cardDateBadge}>
                 <Date dateString={date} />
@@ -34,6 +34,9 @@ export default function Blog({ allPostsData }) {
                   <a className="hover:no-underline">{title}</a>
                 </Link>
               </h3>
+              <div className={utilStyles.cardMeta}>
+                <span className={utilStyles.readingTime}>{readingTime} min read</span>
+              </div>
               <p className={`${utilStyles.cardExcerpt} mt-2`}>{excerpt}</p>
               <div className="mt-4">
                 <Link href={`/posts/${id}`} legacyBehavior>

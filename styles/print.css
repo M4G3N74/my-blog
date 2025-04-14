@@ -1,0 +1,107 @@
+@media print {
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  .darkModeContainer,
+  .tocWrapper,
+  .viewAllLink,
+  .backToHome {
+    display: none !important;
+  }
+
+  /* Adjust page margins and font */
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* Ensure content takes full width */
+  .container,
+  .articleContainer,
+  .articleContent,
+  .articleBody {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Improve headings for print */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    color: #000 !important;
+  }
+
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 0.5cm;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 1cm;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  /* Ensure links are readable */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+    word-wrap: break-word;
+  }
+
+  /* Show URL after links */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    font-style: italic;
+  }
+
+  /* Improve image printing */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Improve code blocks */
+  pre, code {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 10pt;
+  }
+
+  /* Ensure page breaks don't occur in the middle of elements */
+  p, blockquote, ul, ol, dl, tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* Add page numbers */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Add article metadata at the top */
+  .articleHeader {
+    border-bottom: 1pt solid #000;
+    margin-bottom: 1cm;
+    padding-bottom: 0.5cm;
+  }
+
+  .articleMeta {
+    font-size: 10pt;
+    color: #666 !important;
+  }
+}

@@ -6,8 +6,9 @@ import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date'
 
 export async function getStaticProps() {
-  // Limit to 3 posts for the front page
+  // Get posts for the front page (limit to 3)
   const allPostsData = getSortedPostsData(3)
+
   return {
     props: {
       allPostsData
@@ -35,7 +36,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Latest Posts</h2>
         <div className={utilStyles.cardGrid}>
-          {allPostsData.map(({ id, date, title, excerpt }) => (
+          {allPostsData.map(({ id, date, title, excerpt, readingTime }) => (
             <div className={utilStyles.card} key={id}>
               <div className={utilStyles.cardDateBadge}>
                 <Date dateString={date} />
@@ -45,6 +46,9 @@ export default function Home({ allPostsData }) {
                   <a className="hover:no-underline">{title}</a>
                 </Link>
               </h3>
+              <div className={utilStyles.cardMeta}>
+                <span className={utilStyles.readingTime}>{readingTime} min read</span>
+              </div>
               <p className={`${utilStyles.cardExcerpt} mt-2`}>{excerpt}</p>
               <div className="mt-4">
                 <Link href={`/posts/${id}`} legacyBehavior>

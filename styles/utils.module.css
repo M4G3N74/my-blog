@@ -226,3 +226,215 @@
 .dark .cardDateBadge {
     background-color: #7d71e8;
 }
+
+.cardMeta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.readingTime {
+    display: inline-flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.readingTime::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 0.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dark .readingTime {
+    color: #aaa;
+}
+
+.dark .readingTime::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23aaaaaa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+/* Article Styles */
+.articleContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.articleHeader {
+    margin-bottom: 2rem;
+}
+
+.articleMeta {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.dark .articleMeta {
+    color: #aaa;
+}
+
+.articleDate {
+    display: flex;
+    align-items: center;
+}
+
+.articleDate::after {
+    content: '•';
+    margin: 0 0.5rem;
+}
+
+.articleReadingTime {
+    display: flex;
+    align-items: center;
+}
+
+.articleReadingTime::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 0.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dark .articleReadingTime::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23aaaaaa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.articleContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .articleContent {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .tocWrapper {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .articleBody {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.articleBody {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.articleBody h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #431c81;
+}
+
+.dark .articleBody h2 {
+    color: #9f87ff;
+}
+
+.articleBody h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #431c81;
+}
+
+.dark .articleBody h3 {
+    color: #9f87ff;
+}
+
+.articleBody p {
+    margin-bottom: 1.5rem;
+}
+
+.articleBody a {
+    color: #5146e0;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.articleBody a:hover {
+    border-color: #5146e0;
+}
+
+.dark .articleBody a {
+    color: #8f85ff;
+}
+
+.dark .articleBody a:hover {
+    border-color: #8f85ff;
+}
+
+.articleBody ul, .articleBody ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.articleBody li {
+    margin-bottom: 0.5rem;
+}
+
+.articleBody blockquote {
+    border-left: 4px solid #5146e0;
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #555;
+}
+
+.dark .articleBody blockquote {
+    border-left-color: #8f85ff;
+    color: #bbb;
+}
+
+.articleBody pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.dark .articleBody pre {
+    background-color: #2a2a2a;
+}
+
+.articleBody code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.dark .articleBody code {
+    background-color: #2a2a2a;
+}
+
+.articleBody img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
