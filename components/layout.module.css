@@ -2,6 +2,7 @@
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
+    position: relative;
 }
 
 .header {
@@ -12,4 +13,15 @@
 
 .backToHome {
     margin: 3rem 0 0;
+}
+
+.darkModeContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

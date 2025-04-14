@@ -3,37 +3,26 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
-import Date from '../components/date'
+import Date from '../components/date';
 
 export async function getStaticProps() {
-  // Limit to 3 posts for the front page
-  const allPostsData = getSortedPostsData(3)
+  // Get all posts for the blog page
+  const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData
     }
-  }
+  };
 }
 
-export default function Home({ allPostsData }) {
+export default function Blog({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Blog - {siteTitle}</title>
       </Head>
-      <section className={''}>
-        <p>Hi Mate,{' '}
-          <strong>Given </strong>here
-          {' '}a <strong>junior Software engineer </strong> at <a href="https://probasegroup.com/">Probase Group</a></p>
-          <p>This place is where i dump my research and some useful writings </p>
-        <p>
-          You can contact me on {' '}
-          <a href="https://t.me/m4g3n74">Telegram</a> | {' '}
-          <a href="https://twitter.com/m4g3n74"> X </a>
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Latest Posts</h2>
+      <section>
+        <h1 className={utilStyles.headingXl}>All Blog Posts</h1>
         <div className={utilStyles.cardGrid}>
           {allPostsData.map(({ id, date, title, excerpt }) => (
             <div className={utilStyles.card} key={id}>
@@ -54,14 +43,12 @@ export default function Home({ allPostsData }) {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <Link href="/blog" legacyBehavior>
-            <a className={utilStyles.viewAllLink}>View all posts</a>
+        <div className="mt-8">
+          <Link href="/" legacyBehavior>
+            <a className={utilStyles.backLink}>← Back to home</a>
           </Link>
         </div>
       </section>
     </Layout>
   );
 }
-
-// As an easter egg i have added all my avatars that i mostly use on all socials! //

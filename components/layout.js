@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import DarkModeButton from './DarkModeButton';
 
 const name = 'Given Malambo';
 export const siteTitle = 'Malambo\'s Blog';
@@ -25,6 +26,9 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
+            <div className={styles.darkModeContainer}>
+                <DarkModeButton />
+            </div>
             <header className={styles.header} >
                 {home ? (
                     <>
